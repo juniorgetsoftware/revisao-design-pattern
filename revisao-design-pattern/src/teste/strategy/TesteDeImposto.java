@@ -1,10 +1,18 @@
-package estrategy;
+package teste.strategy;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import revisao.COFINS;
+import revisao.CalculadorDeImposto;
+import revisao.ICMS;
+import revisao.ISS;
+import revisao.Imposto;
+import revisao.Item;
+import revisao.Orcamento;
 
 public class TesteDeImposto {
 
@@ -14,7 +22,9 @@ public class TesteDeImposto {
 	@Before
 	public void setUp() {
 		this.calculadora = new CalculadorDeImposto();
-		this.orcamento = new Orcamento(500.00);
+		this.orcamento = new Orcamento();
+		orcamento.add(new Item("Livro IA", 250.0));
+		orcamento.add(new Item("Livro Estrutura de dados", 250.0));
 	}
 
 	@After

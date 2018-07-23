@@ -1,4 +1,4 @@
-package estrategy;
+package revisao;
 
 public class COFINS implements Imposto {
 
