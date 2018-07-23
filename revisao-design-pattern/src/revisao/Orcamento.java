@@ -27,4 +27,13 @@ public class Orcamento {
 	public int totalItens() {
 		return this.itens.size();
 	}
+
+	public boolean temItemComValorMaiorQue(double valor) {
+		for (Item item : itens) {
+			if (item.getValor() > valor) {
+				return true;
+			}
+		}
+		return false;
+	}
 }

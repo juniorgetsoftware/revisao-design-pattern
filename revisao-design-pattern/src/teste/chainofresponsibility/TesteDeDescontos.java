@@ -31,7 +31,7 @@ public class TesteDeDescontos {
 		orcamento.add(new Item("Livro IA", 100.0));
 		orcamento.add(new Item("Livro Estrutura de dados", 250.0));
 		double desconto = calculadora.calcularDesconto(orcamento);
-		Assert.assertEquals(0.0, desconto, 0.0001);
+		Assert.assertEquals(0.0, desconto, 0.001);
 	}
 
 	@Test
@@ -39,7 +39,7 @@ public class TesteDeDescontos {
 		orcamento.add(new Item("Livro IA", 300.0));
 		orcamento.add(new Item("Livro Estrutura de dados", 250.0));
 		double desconto = calculadora.calcularDesconto(orcamento);
-		Assert.assertEquals(27.50, desconto, 0.0001);
+		Assert.assertEquals(27.50, desconto, 0.001);
 	}
 
 	@Test
@@ -52,6 +52,6 @@ public class TesteDeDescontos {
 		orcamento.add(new Item("Headphone", 550.0));
 
 		double desconto = calculadora.calcularDesconto(orcamento);
-		Assert.assertEquals(150.0, desconto, 0.0001);
+		Assert.assertEquals(150.0, desconto, 0.001);
 	}
 }

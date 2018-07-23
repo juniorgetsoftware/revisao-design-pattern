@@ -37,20 +37,20 @@ public class TesteDeImposto {
 	public void deveCalcularImpostoICMS() {
 		Imposto icms = new ICMS();
 		double valorImposto = calculadora.realizarCalculo(orcamento, icms);
-		assertEquals(50.0, valorImposto, 0.0001);
+		assertEquals(50.0, valorImposto, 0.001);
 	}
 
 	@Test
 	public void deveCalcularImpostoISS() {
 		Imposto iss = new ISS();
 		double valorImposto = calculadora.realizarCalculo(orcamento, iss);
-		assertEquals(30.0, valorImposto, 0.0001);
+		assertEquals(30.0, valorImposto, 0.001);
 	}
 
 	@Test
 	public void deveCalcularImpostoCOFINS() {
 		Imposto confins = new COFINS();
 		double valorImposto = calculadora.realizarCalculo(orcamento, confins);
-		assertEquals(15.0, valorImposto, 0.0001);
+		assertEquals(15.0, valorImposto, 0.001);
 	}
 }
