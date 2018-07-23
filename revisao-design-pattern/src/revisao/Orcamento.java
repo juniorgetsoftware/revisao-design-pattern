@@ -23,4 +23,8 @@ public class Orcamento {
 	public List<Item> getItens() {
 		return Collections.unmodifiableList(itens);
 	}
+
+	public int totalItens() {
+		return this.itens.size();
+	}
 }
