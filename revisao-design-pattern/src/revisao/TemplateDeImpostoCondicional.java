@@ -1,13 +1,13 @@
 package revisao;
 
-public abstract class TemplateDeImpostoCondicional implements Imposto {
+public abstract class TemplateDeImpostoCondicional extends Imposto {
 
 	@Override
 	public double calcularImposto(Orcamento orcamento) {
 		if (deveUSarTaxaMaxima(orcamento)) {
-			return taxaMaxima(orcamento);
+			return taxaMaxima(orcamento) + calcularOutroimopsto(orcamento);
 		} else {
-			return taxaMinima(orcamento);
+			return taxaMinima(orcamento) + calcularOutroimopsto(orcamento);
 		}
 	}
 
